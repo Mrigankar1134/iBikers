@@ -4,7 +4,7 @@
   "description": "iBikers full-stack application",
   "main": "index.js",
   "scripts": {
-    "start": "cd backend && npm start",
+    "start": "cd backend && node server.js",
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev",
     "build": "cd frontend && npm run build",
@@ -15,7 +15,6 @@
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
-    "netlify-cli": "^17.15.7",
-    "vite": "^6.3.5"
+    "netlify-cli": "^17.15.7"
   }
 }
