@@ -143,21 +143,18 @@ const BookingModal = ({ bike, durationType, onClose }) => {
         payment: formData.payment ? formData.payment.name : null
       });
       
-      // Send data to backend
-      const response = await fetch(`${API_BASE_URL}/bookings`, {
-        method: 'POST',
-        body: submitData,
-        credentials: 'include', // Include credentials like cookies
-        // Don't set Content-Type header when sending FormData, browser will set it with correct boundary
-      });
-      
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to create booking');
-      }
-      
-      const result = await response.json();
-      console.log('Booking successful:', result);
+      // Instead of backend call, send booking details using mailto link (note: attachments not supported this way)
+      const mailtoLink = `mailto:surajs.mba10@iimamritsar.ac.in?subject=New Bike Booking: ${bike.name}&body=${encodeURIComponent(
+        `Customer Name: ${formData.name}
+Phone Number: ${formData.phone}
+Bike: ${bike.name}
+Duration: ${formData.duration}
+Date: ${formData.date}
+Time: ${formData.time}
+Location: ${formData.location}
+Total Cost: ₹${formData.totalCost}`
+      )}`;
+      window.location.href = mailtoLink;
       
       // Close modal and redirect to success page
       onClose();
