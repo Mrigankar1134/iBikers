@@ -1,0 +1,16 @@
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm run build"
+
+# Redirect all frontend routes to index.html for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Proxy API requests to the serverless functions
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

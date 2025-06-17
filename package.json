@@ -1,0 +1,19 @@
+{
+  "name": "ibikers",
+  "version": "1.0.0",
+  "description": "iBikers full-stack application",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  },
+  "dependencies": {
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.15.7"
+  }
+}
