@@ -27,9 +27,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api/bikes', bikeRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/bookings', bookingRoutes);
+app.use('/bikes', bikeRoutes);
+app.use('/users', userRoutes);
+app.use('/bookings', bookingRoutes);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/ibikers', {
