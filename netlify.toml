@@ -5,6 +5,8 @@
 
 [build.environment]
   NODE_VERSION = "20.10.0"
+  PYTHON_VERSION = "3.12.3"
+  RUBY_VERSION = "3.3.0"
 
 [[redirects]]
   from = "/*"
