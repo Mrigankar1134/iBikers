@@ -11,6 +11,7 @@
     "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
   },
   "dependencies": {
+    "firebase-functions": "^6.3.2",
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
