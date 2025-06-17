@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "iBikers full-stack application",
   "main": "index.js",
+  "engines": {
+    "node": ">=20.10.0"
+  },
   "scripts": {
     "start": "cd backend && node server.js",
     "dev:backend": "cd backend && npm run dev",
