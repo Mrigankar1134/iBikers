@@ -3,6 +3,9 @@
   publish = "dist"
   command = "npm run build"
 
+[build.environment]
+  NODE_VERSION = "18.18.0"
+
 # Redirect all frontend routes to index.html for SPA routing
 [[redirects]]
   from = "/*"
